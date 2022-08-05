@@ -34,7 +34,7 @@ function createFormGroup(allFields){
      
         switch (field.type) {
             case "date":
-                html += '<div class="mb-3"><label for="exampleFormControlInput1" class="form-label">'+field.label+'</label><input type="date" class="form-control" id="exampleFormControlInput1" '+isReadOnly+' '+isRequired+' '+isAutoComplete+'></div>';
+                html += '<div class="mb-3"><label for="exampleFormControlInput1" class="form-label">'+field.label+'</label><input type="date" class="form-control" id="exampleFormControlInput1" '+isReadOnly+' '+isRequired+'></div>';
               break;
 
             case "dropdown":
