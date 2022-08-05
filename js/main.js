@@ -1,4 +1,4 @@
-// Code in Vanilla Javascript
+// Using Vanilla Javascript
 const genForm = document.getElementById('generatedForm');
 
 document.getElementById("proceedToGenerate").addEventListener("submit", function(e) {
@@ -15,9 +15,6 @@ document.getElementById("proceedToGenerate").addEventListener("submit", function
             
             var allFields = fieldData.fields;
             createFormGroup(allFields);
-            // const sortByOrder = allFields.sort(function(a, b) { // Sort by order value
-            //     return parseFloat(a.order) - parseFloat(b.order);
-            // });
         }else{
             alert('Please Upload File With Field!');
         };
