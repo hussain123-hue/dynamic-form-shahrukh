@@ -1,4 +1,4 @@
-// Using Vanilla Javascript
+// Code in Vanilla Javascript
 const genForm = document.getElementById('generatedForm');
 
 document.getElementById("proceedToGenerate").addEventListener("submit", function(e) {
@@ -10,11 +10,11 @@ document.getElementById("proceedToGenerate").addEventListener("submit", function
     const content = e.target.result;
     
     const fieldData = JSON.parse(content); // Parse JSON
-    console.log(fieldData.fields)
         if (fieldData.fields.length > 0) { // check if is not empty
             
             var allFields = fieldData.fields;
             createFormGroup(allFields);
+
         }else{
             alert('Please Upload File With Field!');
         };
@@ -55,7 +55,7 @@ function createFormGroup(allFields){
               break;
 
             case "number":
-                html += '<div class="mb-3"><label class="form-label">'+field.label+'</label><input type="number" class="form-control" '+isReadOnly+' '+isRequired+'></div>';
+                html += '<label class="form-label">'+field.label+'</label><div class="input-group mb-3"><input type="number" class="form-control" '+isReadOnly+' '+isRequired+'><span class="input-group-text">'+field.unit+'</span></div>';
               break;
 
             case "checkbox":
@@ -67,6 +67,7 @@ function createFormGroup(allFields){
               break;
           }
     });
+
     html += '<button class="btn btn-primary my-2" type="submit">Submit</button>';
     genForm.innerHTML = '';
     genForm.innerHTML = html;
