@@ -19,7 +19,7 @@
        <div class="col-12 d-flex d-flex justify-content-center">
             <div class="col-6">
                 <form id="proceedToGenerate">
-                    <label for="basic-url" class="form-label">Upload any JSON file</label>
+                    <label for="basic-url" class="form-label">Upload Your JSON file</label>
                     <div class="input-group">
                         <input type="file" name="jsonData" id="uploadedJsonFile" class="form-control" required>
                         <button class="btn btn-outline-secondary" type="submit" id="inputGroupFileAddon04">Proceed</button>
